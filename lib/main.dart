@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_brainclash/screens/home_screen.dart';
+import 'package:flutter_brainclash/screens/login_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const BancoDouroApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class BancoDouroApp extends StatelessWidget{
+  const BancoDouroApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      routes: {
+        "login": (context) => LoginScreen(),
+        "home" : (context) => HomeScreen()
+      },
+      initialRoute: "login",
     );
   }
+
 }

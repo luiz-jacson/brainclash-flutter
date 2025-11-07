@@ -25,12 +25,10 @@ const LoginScreen({super.key});
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              // 1. Imagem
               Image.asset('assets/images/login-illustration.png', height: 200),
               
               const SizedBox(height: 32),
 
-              // 2. Título
               const Text(
                 'BrainClash',
                 textAlign: TextAlign.center,
@@ -43,16 +41,14 @@ const LoginScreen({super.key});
 
               const SizedBox(height: 16),
 
-              // 3. Subtítulo
               const Text(
                 'Teste seus conhecimentos e desafie seus amigos!',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: Colors.black87),
               ),
 
-              const SizedBox(height: 50), // Aumentamos o espaço
+              const SizedBox(height: 50),
 
-              // 4. Botão Principal: Logar com Google
               ElevatedButton.icon(
                 onPressed: _signInWithGoogle,
                 icon: Image.asset('assets/images/google_icon.png', height: 24.0),

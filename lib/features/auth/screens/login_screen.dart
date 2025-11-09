@@ -9,9 +9,8 @@ const LoginScreen({super.key});
     // Lógica real de login
   }
   
-  void _playAsGuest() {
-    print('Jogando como convidado...');
-    // Lógica para jogar sem login
+  void _playAsGuest(context) {
+    Navigator.pushReplacementNamed(context, "home");
   }
 
   @override
@@ -69,7 +68,7 @@ const LoginScreen({super.key});
               const SizedBox(height: 16),
 
               TextButton(
-                onPressed: _playAsGuest,
+                onPressed: () => _playAsGuest(context),
                 child: const Text(
                   'Jogar como Convidado',
                   style: TextStyle(color: Colors.grey, fontSize: 16),

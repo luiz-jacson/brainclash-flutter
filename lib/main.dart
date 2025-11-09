@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_brainclash/screens/home_screen.dart';
-import 'package:flutter_brainclash/screens/login_screen.dart';
+import 'package:flutter_brainclash/features/guest_quiz/screens/home_screen.dart';
+import 'package:flutter_brainclash/features/auth/screens/login_screen.dart';
 
 void main() {
   runApp(const BancoDouroApp());

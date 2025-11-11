@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_brainclash/core/constants/app_colors.dart';
+import 'package:flutter_brainclash/services/categoria_service.dart';
 
 class LoginScreen extends StatelessWidget {
-const LoginScreen({super.key});
+  const LoginScreen({super.key});
 
   void _signInWithGoogle() {
     print('Logando com Google...');
     // Lógica real de login
   }
-  
+
   void _playAsGuest(context) {
     Navigator.pushReplacementNamed(context, "home");
   }
@@ -25,7 +26,7 @@ const LoginScreen({super.key});
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Image.asset('assets/images/login-illustration.png', height: 200),
-              
+
               const SizedBox(height: 32),
 
               const Text(
@@ -50,7 +51,10 @@ const LoginScreen({super.key});
 
               ElevatedButton.icon(
                 onPressed: _signInWithGoogle,
-                icon: Image.asset('assets/images/google_icon.png', height: 24.0),
+                icon: Image.asset(
+                  'assets/images/google_icon.png',
+                  height: 24.0,
+                ),
                 label: const Text(
                   'Fazer login',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -64,7 +68,7 @@ const LoginScreen({super.key});
                   ),
                 ),
               ),
-              
+
               const SizedBox(height: 16),
 
               TextButton(
@@ -74,7 +78,7 @@ const LoginScreen({super.key});
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
               ),
-              
+
               const SizedBox(height: 40),
             ],
           ),

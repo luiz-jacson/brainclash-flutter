@@ -11,4 +11,12 @@ class AppColors {
   static const Color purpleBlue = Color(0xFF8362F8);
   static const Color yellow = Color(0xFFFACC42);
   static const Color ciane = Color(0xFF42FAB5);
+
+  static Color parseColor(dynamic hexColor){
+    
+    if(hexColor.toString().isEmpty || hexColor == null){
+      return Colors.grey; 
+    } 
+    return Color(int.parse('0xFF$hexColor'));
+  }
 }

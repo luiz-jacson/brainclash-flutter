@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_brainclash/core/constants/app_colors.dart';
+import 'package:flutter_brainclash/models/categoria.dart';
 import 'package:flutter_brainclash/services/categoria_service.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -7,10 +8,9 @@ class LoginScreen extends StatelessWidget {
 
   void _signInWithGoogle() {
     print('Logando com Google...');
-    // Lógica real de login
   }
 
-  void _playAsGuest(context) {
+  void _playAsGuest(context){
     Navigator.pushReplacementNamed(context, "home");
   }
 
